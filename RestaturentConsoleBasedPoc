@@ -1,0 +1,483 @@
+package com.conditionalStatements;
+
+import java.util.Scanner;
+
+public class RestaurentPoc {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String cat = "";
+		double total_price = 0;
+		String yn = "";
+		do {
+			System.out.println(" 1.veg-food \n 2.non-veg food \n 3.starters \n 4.juices \n 5.desserts");
+			System.out.println("Which category food you want");
+			cat = sc.next();
+			sc.nextLine();
+			switch (cat) {
+			case "veg-food", "1" -> {
+				double veg_price = 0;
+				String vegch = "";
+				String vyn = "";
+				do {
+					System.out.println(" 1.Veg Fried Rice \n 2.Veg Noodles \n 3.Paneer Butter Masala \n "
+							+ "4.Veg Biryani \n 5.Gobi Manchurian \n 6.Chole Bhature \n 7.Special Veg Fried Rice");
+					System.out.println("Order the veg Items what you want");
+					vegch = sc.nextLine().trim().toLowerCase();
+					switch (vegch) {
+					case "veg fried rice","1" -> {
+						System.out.println("Enter quantity of Veg Fried Rice");
+						int quantity = sc.nextInt();
+						int vfr_price = 120;
+						veg_price += (vfr_price * quantity);
+						System.out.println("Veg Fried Rice Added " + vfr_price + " Rupees");
+					}
+					case "veg noodles","2" -> {
+						System.out.println("Enter quantity of Veg Noodles");
+						int quantity = sc.nextInt();
+						int vn_price = 110;
+						veg_price += (vn_price * quantity);
+						System.out.println("Veg Noodles Added " + vn_price + " Rupees");
+					}
+					case "paneer butter masala","3" -> {
+						System.out.println("Enter quantity of Paneer Butter Masala");
+						int quantity = sc.nextInt();
+						int pbm_price = 180;
+						veg_price += (pbm_price * quantity);
+						System.out.println("Paneer Butter Masala Added " + pbm_price + " Rupees");
+					}
+					case "veg biryani","4" -> {
+						System.out.println("Enter quantity of Veg Biryani");
+						int quantity = sc.nextInt();
+						int vb_price = 150;
+						veg_price += (vb_price * quantity);
+						System.out.println("Veg Biryani Added " + vb_price + " Rupees");
+					}
+					case "gobi manchurian","5" -> {
+						System.out.println("Enter quantity of Gobi Manchurian");
+						int quantity = sc.nextInt();
+						int gm_price = 130;
+						veg_price += (gm_price * quantity);
+						System.out.println("Gobi Manchurian Added " + gm_price + " Rupees");
+					}
+					case "chole bhature","6" -> {
+						System.out.println("Enter quantity of Chole Bhature");
+						int quantity = sc.nextInt();
+						int cb_price = 100;
+						veg_price += (cb_price * quantity);
+						System.out.println("Chole Bhature Added " + cb_price + " Rupees");
+					}
+					case "special veg fried rice","7" -> {
+						System.out.println("Enter quantity of Special Veg Fried Rice");
+						int quantity = sc.nextInt();
+						int svfr_price = 220;
+						veg_price += (svfr_price * quantity);
+						System.out.println("Special Veg Fried Rice Added " + svfr_price + " Rupees");
+					}
+					default -> System.out.println("Enter item is not available");
+					}
+					System.out.println("Do you want to order veg items. Click y for yes n for no");
+					vyn = sc.next();
+					sc.nextLine();
+				} while (vyn.equalsIgnoreCase("y"));
+				System.out.println("Veg food total Price: " + veg_price);
+				total_price += veg_price;
+			}
+			case "non-veg food", "2" -> {
+				double nveg_price = 0;
+				String nvegch = "";
+				String nvyn = "";
+				do {
+					System.out.println(" 1.Chicken Biryani \n 2.Chicken Fried Rice \n 3.Chicken Noodles \n "
+							+ "4.Egg Biryani \n 5.Egg Fried Rice \n 6.Egg Noodles \n 7.Mutton Biryani");
+					System.out.println("Order the Non-veg Items what you want");
+					nvegch = sc.nextLine().trim().toLowerCase();
+					switch (nvegch) {
+					case "chicken biryani","1" -> {
+						System.out.println("Enter quantity of Chicken Biryani");
+						int quantity = sc.nextInt();
+						int cb_price = 180;
+						nveg_price += (cb_price * quantity);
+						System.out.println("Chicken Biryani Added " + cb_price + " Rupees");
+					}
+					case "chicken fried rice","2" -> {
+						System.out.println("Enter quantity of Chicken Fried Rice");
+						int quantity = sc.nextInt();
+						int cfr_price = 160;
+						nveg_price += (cfr_price * quantity);
+						System.out.println("Chicken Fried Rice Added " + cfr_price + " Rupees");
+					}
+					case "chicken noodles","3" -> {
+						System.out.println("Enter quantity of Chicken Noodles");
+						int quantity = sc.nextInt();
+						int cn_price = 150;
+						nveg_price += (cn_price * quantity);
+						System.out.println("Chicken Noodles Added " + cn_price + " Rupees");
+					}
+					case "egg biryani","4" -> {
+						System.out.println("Enter quantity of Egg Biryani");
+						int quantity = sc.nextInt();
+						int eb_price = 120;
+						nveg_price += (eb_price * quantity);
+						System.out.println("Egg Biryani Added " + eb_price + " Rupees");
+					}
+					case "egg fried rice","5" -> {
+						System.out.println("Enter quantity of Egg Fried Rice");
+						int quantity = sc.nextInt();
+						int efr_price = 100;
+						nveg_price += (efr_price * quantity);
+						System.out.println("Egg Fried Rice Added " + efr_price + " Rupees");
+					}
+					case "egg noodles","6" -> {
+						System.out.println("Enter quantity of Egg Noodles");
+						int quantity = sc.nextInt();
+						int en_price = 100;
+						nveg_price += (en_price * quantity);
+						System.out.println("Egg Noodles Added " + en_price + " Rupees");
+					}
+					case "Mutton Biryani","7" -> {
+						System.out.println("Enter quantity of Mutton Biryani");
+						int quantity = sc.nextInt();
+						int mb_price = 280;
+						nveg_price += (mb_price * quantity);
+						System.out.println("Mutton Biryani Added " + mb_price + " Rupees");
+					}
+					default -> System.out.println("Enter item is not available");
+					}
+					System.out.println("Do you want to order Non-veg items. Click y for yes n for no");
+					nvyn = sc.next();
+					sc.nextLine();
+				} while (nvyn.equalsIgnoreCase("y"));
+				System.out.println("Non-veg food total Price: " + nveg_price);
+				total_price += nveg_price;
+			}
+			case "starters", "3" -> {
+				double starter_price = 0;
+				String sch = "";
+				String syn = "";
+				do {
+					System.out.println("Which starters you want:\n 1.veg\n 2.non-veg");
+					sch = sc.next();
+					sc.nextLine();
+					switch (sch) {
+					case "veg","1" -> {
+						double sveg_price = 0;
+						String svegch = "";
+						String svyn = "";
+						do {
+							System.out.println(" 1.Paneer Tikka \n 2.Crispy Corn \n 3.French Fries \n "
+									+ "4.Chilli Paneer \n 5.Baby Corn 65 \n 6.Spring Rolls \n 7.Mushroom 65");
+							System.out.println("Order the veg Starter Items what you want");
+							svegch = sc.nextLine().trim().toLowerCase();
+							switch (svegch) {
+							case "paneer tikka","1" -> {
+								System.out.println("Enter quantity of Paneer Tikka");
+								int quantity = sc.nextInt();
+								int pt_price = 180;
+								sveg_price += (pt_price * quantity);
+								System.out.println("Paneer Tikka Added " + pt_price + " Rupees");
+							}
+							case "crispy corn","2" -> {
+								System.out.println("Enter quantity of Crispy Corn");
+								int quantity = sc.nextInt();
+								int cc_price = 150;
+								sveg_price += (cc_price * quantity);
+								System.out.println("Crispy Corn Added " + cc_price + " Rupees");
+							}
+							case "French Fries","3" -> {
+								System.out.println("Enter quantity of French Fries");
+								int quantity = sc.nextInt();
+								int ff_price = 90;
+								sveg_price += (ff_price * quantity);
+								System.out.println("French Fries Added " + ff_price + " Rupees");
+							}
+							case "chilli paneer","4" -> {
+								System.out.println("Enter quantity of Chilli Paneer");
+								int quantity = sc.nextInt();
+								int cp_price = 170;
+								sveg_price += (cp_price * quantity);
+								System.out.println("Veg Biryani Added " + cp_price + " Rupees");
+							}
+							case "baby corn 65","5" -> {
+								System.out.println("Enter quantity of Baby Corn 65");
+								int quantity = sc.nextInt();
+								int bc_price = 150;
+								sveg_price += (bc_price * quantity);
+								System.out.println("Baby Corn 65 Added " + bc_price + " Rupees");
+							}
+							case "spring rolls","6" -> {
+								System.out.println("Enter quantity of Spring Rolls");
+								int quantity = sc.nextInt();
+								int sr_price = 120;
+								sveg_price += (sr_price * quantity);
+								System.out.println("Spring Rolls Added " + sr_price + " Rupees");
+							}
+							case "mushroom 65","7" -> {
+								System.out.println("Enter quantity of Mushroom 65");
+								int quantity = sc.nextInt();
+								int ms_price = 160;
+								sveg_price += (ms_price * quantity);
+								System.out.println("Mushroom 65 Added " + ms_price + " Rupees");
+							}
+							default -> System.out.println("Enter item is not available");
+							}
+							System.out.println("Do you want to order veg starters  Click y for yes n for no");
+							svyn = sc.next();
+							sc.nextLine();
+						} while (svyn.equalsIgnoreCase("y"));
+						System.out.println("Veg starter total Price: " + sveg_price);
+						starter_price += sveg_price;
+					}
+					case "non-veg","2" -> {
+						double snveg_price = 0;
+						String snvegch = "";
+						String snvyn = "";
+						do {
+							System.out.println(" 1.Chicken 65 \n 2.Chicken Lollipop \n 3.Chilli Chicken \n "
+									+ "4.Chicken Tikka \n 5.Apollo Fish \n 6.Fish Fingers \n 7.Prawn Fry");
+							System.out.println("Order the Non-veg Starters. What you want to Order?");
+							snvegch = sc.nextLine().trim().toLowerCase();
+							switch (snvegch) {
+							case "chicken 65","1" -> {
+								System.out.println("Enter quantity of Chicken 65");
+								int quantity = sc.nextInt();
+								int c65_price = 180;
+								snveg_price += (c65_price * quantity);
+								System.out.println("Chicken 65  Added " + c65_price + " Rupees");
+							}
+							case "chicken lollipop","2" -> {
+								System.out.println("Enter quantity of Chicken Lollipop");
+								int quantity = sc.nextInt();
+								int cl_price = 220;
+								snveg_price += (cl_price * quantity);
+								System.out.println("Chicken Lollipop Added " + cl_price + " Rupees");
+							}
+							case "chilli chicken","3" -> {
+								System.out.println("Enter quantity of Chilli Chicken");
+								int quantity = sc.nextInt();
+								int cc_price = 200;
+								snveg_price += (cc_price * quantity);
+								System.out.println("Chilli Chicken Added " + cc_price + " Rupees");
+							}
+							case "chicken tikka","4" -> {
+								System.out.println("Enter quantity of Chicken Tikka");
+								int quantity = sc.nextInt();
+								int ct_price = 240;
+								snveg_price += (ct_price * quantity);
+								System.out.println("Chicken Tikka Added " + ct_price + " Rupees");
+							}
+							case "apollo fish","5" -> {
+								System.out.println("Enter quantity of Apollo Fish");
+								int quantity = sc.nextInt();
+								int af_price = 250;
+								snveg_price += (af_price * quantity);
+								System.out.println("Apollo Fish Added " + af_price + " Rupees");
+							}
+							case "fish fingers","6" -> {
+								System.out.println("Enter quantity of Fish Fingers");
+								int quantity = sc.nextInt();
+								int ff_price = 220;
+								snveg_price += (ff_price * quantity);
+								System.out.println("Fish Fingers Added " + ff_price + " Rupees");
+							}
+							case "prawn fry","7" -> {
+								System.out.println("Enter quantity of Prawn Fry");
+								int quantity = sc.nextInt();
+								int pf_price = 280;
+								snveg_price += (pf_price * quantity);
+								System.out.println("Prawn Fry Added " + pf_price + " Rupees");
+							}
+							default -> System.out.println("Enter item is not available");
+							}
+							System.out.println("Do you want to order Non-veg items. Click y for yes n for no");
+							snvyn = sc.next();
+							sc.nextLine();
+						} while (snvyn.equalsIgnoreCase("y"));
+						System.out.println("Non-veg Starter total Price: " + snveg_price);
+						starter_price += snveg_price;
+					}
+					default -> System.out.println("Enter item is not available");
+					}
+					System.out.println("Do You want to order starter y for yes and n for no");
+					syn = sc.next();
+					sc.nextLine();
+				} while (syn.equalsIgnoreCase("y"));
+				System.out.println("Starter total Price: " + starter_price);
+				total_price += starter_price;
+			}
+
+			case "juices", "4" -> {
+				double juice_price = 0;
+				String juicech = "";
+				String jyn = "";
+
+				do {
+					System.out.println(" 1. Orange Juice \n 2. Apple Juice \n 3. Mango Juice \n "
+							+ "4. Watermelon Juice \n 5. Pineapple Juice \n 6. Mosambi Juice \n 7. Mixed Fruit Juice");
+
+					System.out.println("Order the juice items what you want");
+					juicech = sc.nextLine().trim().toLowerCase();
+
+					switch (juicech) {
+					case "orange juice", "1" -> {
+						System.out.println("Enter quantity of Orange Juice");
+						int quantity = sc.nextInt();
+						int oj_price = 60;
+						juice_price += (oj_price * quantity);
+						System.out.println("Orange Juice Added " + (oj_price * quantity) + " Rupees");
+					}
+
+					case "apple juice", "2" -> {
+						System.out.println("Enter quantity of Apple Juice");
+						int quantity = sc.nextInt();
+						int aj_price = 80;
+						juice_price += (aj_price * quantity);
+						System.out.println("Apple Juice Added " + (aj_price * quantity) + " Rupees");
+					}
+
+					case "mango juice", "3" -> {
+						System.out.println("Enter quantity of Mango Juice");
+						int quantity = sc.nextInt();
+						int mj_price = 70;
+						juice_price += (mj_price * quantity);
+						System.out.println("Mango Juice Added " + (mj_price * quantity) + " Rupees");
+					}
+
+					case "watermelon juice", "4" -> {
+						System.out.println("Enter quantity of Watermelon Juice");
+						int quantity = sc.nextInt();
+						int wj_price = 50;
+						juice_price += (wj_price * quantity);
+						System.out.println("Watermelon Juice Added " + (wj_price * quantity) + " Rupees");
+					}
+
+					case "pineapple juice", "5" -> {
+						System.out.println("Enter quantity of Pineapple Juice");
+						int quantity = sc.nextInt();
+						int pj_price = 70;
+						juice_price += (pj_price * quantity);
+						System.out.println("Pineapple Juice Added " + (pj_price * quantity) + " Rupees");
+					}
+
+					case "mosambi juice", "6" -> {
+						System.out.println("Enter quantity of Mosambi Juice");
+						int quantity = sc.nextInt();
+						int mo_price = 60;
+						juice_price += (mo_price * quantity);
+						System.out.println("Mosambi Juice Added " + (mo_price * quantity) + " Rupees");
+					}
+
+					case "mixed fruit juice", "7" -> {
+						System.out.println("Enter quantity of Mixed Fruit Juice");
+						int quantity = sc.nextInt();
+						int mfj_price = 100;
+						juice_price += (mfj_price * quantity);
+						System.out.println("Mixed Fruit Juice Added " + (mfj_price * quantity) + " Rupees");
+					}
+
+					default -> System.out.println("Entered item is not available");
+					}
+
+					System.out.println("Do you want to order juices? Click y for yes, n for no");
+					jyn = sc.next();
+					sc.nextLine();
+
+				} while (jyn.equalsIgnoreCase("y"));
+
+				System.out.println("Juices total Price: " + juice_price);
+				total_price += juice_price;
+			}
+
+			case "desserts", "5" -> {
+				double dessert_price = 0;
+				String dessertch = "";
+				String dyn = "";
+
+				do {
+					System.out.println(" 1. Ice Cream \n 2. Gulab Jamun \n 3. Chocolate Brownie \n "
+							+ "4. Fruit Salad \n 5. Chocolate Cake \n 6. Rasmalai \n 7. Double Ka Meetha");
+
+					System.out.println("Order the dessert items what you want");
+					dessertch = sc.nextLine().trim().toLowerCase();
+
+					switch (dessertch) {
+					case "ice cream", "1" -> {
+						System.out.println("Enter quantity of Ice Cream");
+						int quantity = sc.nextInt();
+						int ic_price = 60;
+						dessert_price += (ic_price * quantity);
+						System.out.println("Ice Cream Added " + (ic_price * quantity) + " Rupees");
+					}
+
+					case "gulab jamun", "2" -> {
+						System.out.println("Enter quantity of Gulab Jamun");
+						int quantity = sc.nextInt();
+						int gj_price = 50;
+						dessert_price += (gj_price * quantity);
+						System.out.println("Gulab Jamun Added " + (gj_price * quantity) + " Rupees");
+					}
+
+					case "chocolate brownie", "3" -> {
+						System.out.println("Enter quantity of Chocolate Brownie");
+						int quantity = sc.nextInt();
+						int cb_price = 100;
+						dessert_price += (cb_price * quantity);
+						System.out.println("Chocolate Brownie Added " + (cb_price * quantity) + " Rupees");
+					}
+
+					case "fruit salad", "4" -> {
+						System.out.println("Enter quantity of Fruit Salad");
+						int quantity = sc.nextInt();
+						int fs_price = 80;
+						dessert_price += (fs_price * quantity);
+						System.out.println("Fruit Salad Added " + (fs_price * quantity) + " Rupees");
+					}
+
+					case "chocolate cake", "5" -> {
+						System.out.println("Enter quantity of Chocolate Cake");
+						int quantity = sc.nextInt();
+						int cc_price = 120;
+						dessert_price += (cc_price * quantity);
+						System.out.println("Chocolate Cake Added " + (cc_price * quantity) + " Rupees");
+					}
+
+					case "rasmalai", "6" -> {
+						System.out.println("Enter quantity of Rasmalai");
+						int quantity = sc.nextInt();
+						int r_price = 70;
+						dessert_price += (r_price * quantity);
+						System.out.println("Rasmalai Added " + (r_price * quantity) + " Rupees");
+					}
+
+					case "double ka meetha", "7" -> {
+						System.out.println("Enter quantity of Double Ka Meetha");
+						int quantity = sc.nextInt();
+						int dkm_price = 90;
+						dessert_price += (dkm_price * quantity);
+						System.out.println("Double Ka Meetha Added " + (dkm_price * quantity) + " Rupees");
+					}
+
+					default -> System.out.println("Entered item is not available");
+					}
+
+					System.out.println("Do you want to order desserts? Click y for yes, n for no");
+					dyn = sc.next();
+					sc.nextLine();
+
+				} while (dyn.equalsIgnoreCase("y"));
+
+				System.out.println("Desserts total Price: " + dessert_price);
+				total_price += dessert_price;
+			}
+
+			default -> System.out.println("Enter item is not available");
+			}
+			System.out.println("Do you want continue order. Click y for yes n for no");
+			yn = sc.next();
+			sc.nextLine();
+		} while (yn.equalsIgnoreCase("y"));
+		System.out.println("Total Price: " + total_price);
+
+	}
+
+}
