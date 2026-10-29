@@ -1,0 +1,638 @@
+package com.conditionalStatements;
+
+import java.util.Scanner;
+
+public class DigitalStore {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		double total_price=0;
+		String cat="";
+		String yn="";
+		do {
+			System.out.println("Add menu: "+"\n 1. Laptop \n 2. Mobiles \n 3. Tabs \n 4.Smart Watches \n 5. Ear phones");
+			System.out.println("Enter category you purchase:");
+			cat=sc.nextLine();
+			switch(cat) {
+			 case "Laptop","1" ->{
+				 double laptop_price=0;
+				 String laptop_cat="";
+				 String lyn="";
+				 do {
+					 System.out.println("Select Laptop Brand:");
+					    System.out.println("1. hp");
+					    System.out.println("2. lenovo");
+					    System.out.println("3. dell");
+					    System.out.println("4. asus");
+
+					   laptop_cat = sc.nextLine().toLowerCase();
+					 switch(laptop_cat) {
+					 case "hp","1"->{
+						   double hp_price=0;
+						   System.out.println("Select HP Laptop:");
+						    System.out.println("1. HP Pavilion");
+						    System.out.println("2. HP Victus");
+						    System.out.println("3. HP Envy");
+
+						    String hp_model = sc.nextLine().toLowerCase();
+						    switch (hp_model) {
+					        case "hp pavilion","1"-> {
+					            System.out.println("Model: HP Pavilion Price: ₹90,000");
+					            double hppavilion_price=90000;
+					            hp_price+=hppavilion_price;
+					        }
+					        case "hp victus","2"-> {
+					            System.out.println("Model: HP Victus Price: ₹75,000");
+					            double hpvictus_price=75000;
+					            hp_price+=hpvictus_price; 
+					        }
+
+					        case "hp envy","3"-> {
+					            System.out.println("Model: HP Envy Price: ₹90,000");
+					            double hpenvy_price=90000;
+					            hp_price+=hpenvy_price;
+					        }
+
+					        default -> System.out.println("Invalid HP model");
+					        
+					    }
+						  System.out.println("Hp Laptop Price: "+hp_price);
+						  laptop_price+=hp_price;
+					 }
+					 case "lenovo","2"->{
+						 double lenovo_price=0;
+						 System.out.println("Select Lenovo Laptop:");
+						    System.out.println("1. Lenovo IdeaPad");
+						    System.out.println("2. Lenovo ThinkPad");
+						    System.out.println("3. Lenovo Legion");
+
+						    String lenovo_model = sc.nextLine().toLowerCase();
+
+						    switch (lenovo_model) {
+						        case "lenovo ideapad","1" -> {
+						            System.out.println("Model: Lenovo IdeaPad Price: ₹50,000");
+						            double ideapad_price = 50000;
+						            lenovo_price += ideapad_price;
+						        }
+
+						        case "lenovo thinkpad","2" -> {
+						            System.out.println("Model: Lenovo ThinkPad Price: ₹80,000");
+						            double thinkpad_price = 80000;
+						            lenovo_price += thinkpad_price;
+						        }
+
+						        case "lenovo legion","3" -> {
+						            System.out.println("Model: Lenovo Legion Price: ₹1,20,000");
+						            double legion_price = 120000;
+						            lenovo_price += legion_price;
+						        }
+
+						        default -> System.out.println("Invalid Lenovo model");
+						    }
+						    System.out.println("Lenovo Laptop Price: "+lenovo_price);
+						    laptop_price+=lenovo_price;
+					 }
+					 case "dell","3"->{
+						 double dell_price=0;
+						 System.out.println("Select Dell Laptop:");
+						    System.out.println("1. Dell Inspiron");
+						    System.out.println("2. Dell Vostro");
+						    System.out.println("3. Dell XPS");
+
+						    String dell_model = sc.nextLine().toLowerCase();
+
+						    switch (dell_model) {
+						        case "dell inspiron","1" -> {
+						            System.out.println("Model: Dell Inspiron Price: ₹55,000");
+						            double inspiron_price = 55000;
+						            dell_price += inspiron_price;
+						        }
+
+						        case "dell vostro","2" -> {
+						            System.out.println("Model: Dell Vostro Price: ₹65,000");
+						            double vostro_price = 65000;
+						            dell_price += vostro_price;
+						        }
+
+						        case "dell xps","3" -> {
+						            System.out.println("Model: Dell XPS Price: ₹1,50,000");
+						            double xps_price = 150000;
+						            dell_price += xps_price;
+						        }
+
+						        default -> System.out.println("Invalid Dell model");
+						    }
+						    System.out.println("Dell Laptop Price: "+dell_price);
+						    laptop_price+=dell_price;
+					 }
+					 case "asus","4"->{
+						 double asus_price=0;
+						 System.out.println("Select Asus Laptop:");
+						    System.out.println("1. Asus VivoBook");
+						    System.out.println("2. Asus ZenBook");
+						    System.out.println("3. Asus ROG");
+
+						    String asus_model = sc.nextLine().toLowerCase();
+
+						    switch (asus_model) {
+						        case "asus vivobook","1" -> {
+						            System.out.println("Model: Asus VivoBook Price: ₹45,000");
+						            double vivobook_price = 45000;
+						            asus_price += vivobook_price;
+						        }
+
+						        case "asus zenbook","2" -> {
+						            System.out.println("Model: Asus ZenBook Price: ₹95,000");
+						            double zenbook_price = 95000;
+						            asus_price += zenbook_price;
+						        }
+
+						        case "asus rog","3" -> {
+						            System.out.println("Model: Asus ROG Price: ₹1,25,000");
+						            double rog_price = 125000;
+						            asus_price += rog_price;
+						        }
+
+						        default -> System.out.println("Invalid Asus model");
+						    }
+						    System.out.println("Asus Laptop Price: "+asus_price);
+						    laptop_price+=asus_price;
+						  }
+					   default -> System.out.println("Invalid Laptop model");
+					 }
+					 System.out.println("Do you want to continue laptop purchases y for yes and n for no");
+					 lyn=sc.nextLine();
+				 }while(lyn.equalsIgnoreCase("y"));
+				 System.out.println("Total Laptop Price: "+laptop_price);
+				 total_price+=laptop_price;
+			 }
+
+          case "Mobiles","2" -> {
+
+    double mobile_price = 0;
+    String mobile_cat;
+    String myn = "";
+
+    do {
+        System.out.println("Select Mobile Brand:");
+        System.out.println("1. Samsung");
+        System.out.println("2. Apple");
+        System.out.println("3. OnePlus");
+
+        mobile_cat = sc.nextLine().toLowerCase();
+
+        switch (mobile_cat) {
+
+            case "samsung","1" -> {
+            	    double samsung_price=0;
+                System.out.println("Select Samsung Mobile:");
+                System.out.println("1. Samsung Galaxy S25");
+                System.out.println("2. Samsung Galaxy A56");
+                System.out.println("3. Samsung Galaxy M35");
+
+                String samsung_model = sc.nextLine().toLowerCase();
+
+                switch (samsung_model) {
+
+                    case "samsung galaxy s25","1" -> {
+                        System.out.println(
+                            "Samsung Galaxy S25 Price: ₹80,000");
+                        samsung_price += 80000;
+                    }
+
+                    case "samsung galaxy a56","2" -> {
+                        System.out.println(
+                            "Samsung Galaxy A56 Price: ₹40,000");
+                        samsung_price += 40000;
+                    }
+
+                    case "samsung galaxy m35","3" -> {
+                        System.out.println(
+                            "Samsung Galaxy M35 Price: ₹20,000");
+                        samsung_price += 20000;
+                    }
+
+                    default ->
+                        System.out.println("Invalid Samsung model");
+                }
+                System.out.println("Samsung mobile Price : "+samsung_price);
+                mobile_price+=samsung_price;
+            }
+
+            case "apple","2" -> {
+            	    double iphone_price=0;
+                System.out.println("Select Apple Mobile:");
+                System.out.println("1. iPhone 16");
+                System.out.println("2. iPhone 16 Pro");
+
+                String apple_model = sc.nextLine().toLowerCase();
+
+                switch (apple_model) {
+                    case "iphone 16","1" -> {
+                        System.out.println("iPhone 16 Price: ₹80,000");
+                        iphone_price += 80000;
+                    }
+
+                    case "iphone 16 pro","2" -> {
+                        System.out.println("iPhone 16 Pro Price: ₹1,20,000");
+                        iphone_price += 120000;
+                    }
+
+                    default ->
+                        System.out.println("Invalid Apple model");
+                }
+                System.out.println("Iphone mobile Price : "+iphone_price);
+                mobile_price+=iphone_price;
+            }
+
+            case "oneplus","3" -> {
+            	    double oneplus_price=0;
+                System.out.println("Select OnePlus Mobile:");
+                System.out.println("1. OnePlus 13");
+                System.out.println("2. OnePlus Nord");
+
+                String oneplus_model = sc.nextLine().toLowerCase();
+
+                switch (oneplus_model) {
+                    case "oneplus 13","1" -> {
+                        System.out.println("OnePlus 13 Price: ₹70,000");
+                        oneplus_price += 70000;
+                    }
+
+                    case "oneplus nord","2" -> {
+                        System.out.println("OnePlus Nord Price: ₹30,000");
+                        oneplus_price += 30000;
+                    }
+
+                    default ->
+                        System.out.println("Invalid OnePlus model");
+                }
+                System.out.println("Oneplus mobile Price : "+oneplus_price);
+                mobile_price+=oneplus_price;
+            }
+
+            default ->
+                System.out.println("Invalid mobile brand");
+        }
+
+        System.out.println("Do you want to continue mobile purchases? y/n");
+        myn = sc.nextLine();
+
+        } while (myn.equalsIgnoreCase("y"));
+
+            System.out.println("Total Mobile Price: ₹" + mobile_price);
+            total_price+=mobile_price;
+         }
+
+
+      case "Tabs","3" -> {
+
+        double tab_price = 0;
+        String tab_cat;
+         String tyn = "";
+
+        do {
+        System.out.println("Select Tablet Brand:");
+        System.out.println("1. Samsung");
+        System.out.println("2. Apple");
+        System.out.println("3. Lenovo");
+
+        tab_cat = sc.nextLine().toLowerCase();
+
+        switch (tab_cat) {
+
+            case "samsung","1" -> {
+            	    double samsung_price=0;
+                System.out.println("Select Samsung Tablet:");
+                System.out.println("1. Samsung Galaxy Tab S10");
+                System.out.println("2. Samsung Galaxy Tab S10+");
+                System.out.println("3. Samsung Galaxy Tab A9");
+
+                String samsung_tab = sc.nextLine().toLowerCase();
+
+                switch (samsung_tab) {
+                    case "samsung galaxy tab s10","1" -> {
+                        System.out.println("Samsung Galaxy Tab S10 Price: ₹70,000");
+                        samsung_price += 70000;
+                    }
+                    case "samsung galaxy tab s10+","2" -> {
+                        System.out.println("Samsung Galaxy Tab S10+ Price: ₹90,000");
+                         samsung_price+= 90000;
+                    }
+                    case "samsung galaxy tab a9","3" -> {
+                        System.out.println("Samsung Galaxy Tab A9 Price: ₹20,000");
+                        samsung_price+= 20000;
+                    }
+                    default -> System.out.println("Invalid Samsung Tablet");
+                }
+                System.out.println("Total samsung Price: "+samsung_price);
+                tab_price+=samsung_price;
+            }
+
+            case "apple","2" -> {
+            	    double apple_price=0;
+                System.out.println("Select Apple Tablet:");
+                System.out.println("1. iPad Air");
+                System.out.println("2. iPad Pro");
+                System.out.println("3. iPad Mini");
+
+                String apple_tab = sc.nextLine().toLowerCase();
+
+                switch (apple_tab) {
+                    case "ipad air","1" -> {
+                        System.out.println("iPad Air Price: ₹60,000");
+                        apple_price += 60000;
+                    }
+                    case "ipad pro","2" -> {
+                        System.out.println("iPad Pro Price: ₹1,00,000");
+                        apple_price += 100000;
+                    }
+                    case "ipad mini","3" -> {
+                        System.out.println("iPad Mini Price: ₹50,000");
+                        apple_price += 50000;
+                    }
+                    default -> System.out.println("Invalid Apple Tablet");
+                }
+                 System.out.println("Total apple Price: "+apple_price);
+                 tab_price+=apple_price;
+            }
+
+            case "lenovo","3" -> {
+            	 double lenovo_price=0;
+                System.out.println("Select Lenovo Tablet:");
+                System.out.println("1. Lenovo Tab P12");
+                System.out.println("2. Lenovo Tab M11");
+                System.out.println("3. Lenovo Legion Tab");
+
+                String lenovo_tab = sc.nextLine().toLowerCase();
+
+                switch (lenovo_tab) {
+                    case "lenovo tab p12","1" -> {
+                        System.out.println("Lenovo Tab P12 Price: ₹30,000");
+                        lenovo_price += 30000;
+                    }
+                    case "lenovo tab m11","2" -> {
+                        System.out.println("Lenovo Tab M11 Price: ₹20,000");
+                        lenovo_price += 20000;
+                    }
+                    case "lenovo legion tab","3" -> {
+                        System.out.println("Lenovo Legion Tab Price: ₹50,000");
+                        lenovo_price += 50000;
+                    }
+                    default -> System.out.println("Invalid Lenovo Tablet");
+                }
+                System.out.println("Total lenovo Price: "+lenovo_price);
+                tab_price+=lenovo_price;
+            }
+
+            default -> System.out.println("Invalid Tablet Brand");
+        }
+
+        System.out.println("Do you want to continue tablet purchases? y/n");
+        tyn = sc.nextLine();
+
+         } while (tyn.equalsIgnoreCase("y"));
+
+         System.out.println("Total Tablet Price: ₹" + tab_price);
+         total_price+=tab_price;
+        }
+           
+
+     case "Smart Watches","4" -> {
+
+    double watch_price = 0;
+    String watch_cat;
+    String syn = "";
+
+    do {
+        System.out.println("Select Smart Watch Brand:");
+        System.out.println("1. Samsung");
+        System.out.println("2. Apple");
+        System.out.println("3. Noise");
+
+        watch_cat = sc.nextLine().toLowerCase();
+
+        switch (watch_cat) {
+
+            case "samsung","1" -> {
+            	    double samsung_price=0;
+                System.out.println("Select Samsung Smart Watch:");
+                System.out.println("1. Galaxy Watch 7");
+                System.out.println("2. Galaxy Watch Ultra");
+                System.out.println("3. Galaxy Watch FE");
+
+                String samsung_watch = sc.nextLine().toLowerCase();
+
+                switch (samsung_watch) {
+                    case "galaxy watch 7","1" -> {
+                        System.out.println("Galaxy Watch 7 Price: ₹30,000");
+                        samsung_price += 30000;
+                    }
+                    case "galaxy watch ultra","2" -> {
+                        System.out.println("Galaxy Watch Ultra Price: ₹60,000");
+                        samsung_price  += 60000;
+                    }
+                    case "galaxy watch fe","3" -> {
+                        System.out.println("Galaxy Watch FE Price: ₹20,000");
+                        samsung_price  += 20000;
+                    }
+                    default -> System.out.println("Invalid Samsung Watch");
+                }
+                System.out.println("Samsung watch Price: "+samsung_price);
+                watch_price+=samsung_price ;
+            }
+
+            case "apple","2" -> {
+            	    double apple_price=0;
+                System.out.println("Select Apple Smart Watch:");
+                System.out.println("1. Apple Watch SE");
+                System.out.println("2. Apple Watch Series 10");
+                System.out.println("3. Apple Watch Ultra 2");
+
+                String apple_watch = sc.nextLine().toLowerCase();
+
+                switch (apple_watch) {
+                    case "apple watch se","1" -> {
+                        System.out.println("Apple Watch SE Price: ₹25,000");
+                        apple_price += 25000;
+                    }
+                    case "apple watch series 10","2" -> {
+                        System.out.println("Apple Watch Series 10 Price: ₹45,000");
+                        apple_price += 45000;
+                    }
+                    case "apple watch ultra 2","3" -> {
+                        System.out.println("Apple Watch Ultra 2 Price: ₹90,000");
+                        apple_price += 90000;
+                    }
+                    default -> System.out.println("Invalid Apple Watch");
+                }
+                System.out.println("Apple watch Price: "+apple_price);
+                watch_price+=apple_price;
+            }
+
+            case "noise","3" -> {
+            	    double noise_price=0;
+                System.out.println("Select Noise Smart Watch:");
+                System.out.println("1. Noise ColorFit");
+                System.out.println("2. Noise Endeavour");
+                System.out.println("3. Noise Pro 5");
+
+                String noise_watch = sc.nextLine().toLowerCase();
+
+                switch (noise_watch) {
+                    case "noise colorfit","1" -> {
+                        System.out.println("Noise ColorFit Price: ₹3,000");
+                        noise_price += 3000;
+                    }
+                    case "noise endeavour","2" -> {
+                        System.out.println("Noise Endeavour Price: ₹5,000");
+                        noise_price += 5000;
+                    }
+                    case "noise pro 5","3" -> {
+                        System.out.println("Noise Pro 5 Price: ₹4,000");
+                        noise_price += 4000;
+                    }
+                    default -> System.out.println("Invalid Noise Watch");
+                }
+                System.out.println("Noise watch Price: "+noise_price);
+                watch_price+=noise_price;
+            }
+
+            default -> System.out.println("Invalid Smart Watch Brand");
+          }
+
+        System.out.println("Do you want to continue smart watch purchases? y/n");
+        syn = sc.nextLine();
+
+         } while (syn.equalsIgnoreCase("y"));
+
+         System.out.println("Total Smart Watch Price: ₹" + watch_price);
+         total_price+=watch_price;
+     }
+
+
+case "Ear Phones","5" -> {
+
+    double earphone_price = 0;
+    String earphone_cat;
+    String eyn = "";
+
+    do {
+        System.out.println("Select Ear Phone Brand:");
+        System.out.println("1. Samsung");
+        System.out.println("2. Apple");
+        System.out.println("3. boAt");
+
+        earphone_cat = sc.nextLine().toLowerCase();
+
+        switch (earphone_cat) {
+
+            case "samsung","1" -> {
+            	    double samsung_price=0;
+                System.out.println("Select Samsung Ear Phones:");
+                System.out.println("1. Galaxy Buds FE");
+                System.out.println("2. Galaxy Buds 3");
+                System.out.println("3. Galaxy Buds 3 Pro");
+
+                String samsung_earphone = sc.nextLine().toLowerCase();
+
+                switch (samsung_earphone) {
+                    case "galaxy buds fe","1" -> {
+                        System.out.println("Galaxy Buds FE Price: ₹8,000");
+                        samsung_price += 8000;
+                    }
+                    case "galaxy buds 3","2" -> {
+                        System.out.println("Galaxy Buds 3 Price: ₹15,000");
+                        samsung_price += 15000;
+                    }
+                    case "galaxy buds 3 pro","3" -> {
+                        System.out.println("Galaxy Buds 3 Pro Price: ₹20,000");
+                        samsung_price += 20000;
+                    }
+                    default -> System.out.println("Invalid Samsung Ear Phone");
+                }
+                System.out.println("Samsung Earphone Price: "+samsung_price);
+                earphone_price+=samsung_price;
+                
+            }
+
+            case "apple","2" -> {
+            	    double apple_price=0;
+                System.out.println("Select Apple Ear Phones:");
+                System.out.println("1. AirPods 4");
+                System.out.println("2. AirPods Pro 2");
+                System.out.println("3. AirPods Max");
+
+                String apple_earphone = sc.nextLine().toLowerCase();
+
+                switch (apple_earphone) {
+                    case "airpods 4","1"-> {
+                        System.out.println("AirPods 4 Price: ₹13,000");
+                        apple_price += 13000;
+                    }
+                    case "airpods pro 2","2" -> {
+                        System.out.println("AirPods Pro 2 Price: ₹25,000");
+                        apple_price += 25000;
+                    }
+                    case "airpods max","3" -> {
+                        System.out.println("AirPods Max Price: ₹60,000");
+                        apple_price += 60000;
+                    }
+                    default -> System.out.println("Invalid Apple Ear Phone");
+                }
+                System.out.println("Apple Airpods Price: "+apple_price);
+                earphone_price+=apple_price;
+            }
+
+            case "boat","3" -> {
+            	double boat_price=0;
+                System.out.println("Select boAt Ear Phones:");
+                System.out.println("1. boAt Airdopes 141");
+                System.out.println("2. boAt Airdopes 161");
+                System.out.println("3. boAt Nirvana");
+
+                String boat_earphone = sc.nextLine().toLowerCase();
+
+                switch (boat_earphone) {
+                    case "boat airdopes 141","1" -> {
+                        System.out.println("boAt Airdopes 141 Price: ₹1,500");
+                        boat_price += 1500;
+                    }
+                    case "boat airdopes 161","2" -> {
+                        System.out.println("boAt Airdopes 161 Price: ₹2,000");
+                        boat_price += 2000;
+                    }
+                    case "boat nirvana","3" -> {
+                        System.out.println("boAt Nirvana Price: ₹3,000");
+                        boat_price += 3000;
+                    }
+                    default -> System.out.println("Invalid boAt Ear Phone");
+                }
+                System.out.println("Boat Earphone Price: "+boat_price);
+                earphone_price+=boat_price;
+            }
+
+            default -> System.out.println("Invalid Ear Phone Brand");
+        }
+
+        System.out.println("Do you want to continue ear phone purchases? y/n");
+        eyn = sc.nextLine();
+
+      } while (eyn.equalsIgnoreCase("y"));
+
+           System.out.println("Total Ear Phone Price: ₹" + earphone_price);
+           total_price+=earphone_price;
+      }
+
+              default -> System.out.println("Entered Category is not available");
+			}
+			
+			System.out.println("Do you want to continue shopping? y/n");
+			yn=sc.nextLine();
+		}while(yn.equalsIgnoreCase("y"));
+		System.out.println("Thanks for shopping in my Store.\n Visit my store to Purchase the good quality products with reasonable prices.");
+		System.out.println("Your total Purchases Price: "+total_price);
+
+	}
+
+}
