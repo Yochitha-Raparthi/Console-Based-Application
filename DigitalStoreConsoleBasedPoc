@@ -12,7 +12,8 @@ public class DigitalStore {
 		do {
 			System.out.println("Add menu: "+"\n 1. Laptop \n 2. Mobiles \n 3. Tabs \n 4.Smart Watches \n 5. Ear phones");
 			System.out.println("Enter category you purchase:");
-			cat=sc.nextLine();
+			cat=sc.next();
+			sc.nextLine();
 			switch(cat) {
 			 case "Laptop","1" ->{
 				 double laptop_price=0;
@@ -38,19 +39,25 @@ public class DigitalStore {
 						    switch (hp_model) {
 					        case "hp pavilion","1"-> {
 					            System.out.println("Model: HP Pavilion Price: ₹90,000");
+					            System.out.println("Enter quantity of HP Pavilion");
+								int quantity = sc.nextInt();
 					            double hppavilion_price=90000;
-					            hp_price+=hppavilion_price;
+					            hp_price+=(hppavilion_price*quantity);
 					        }
 					        case "hp victus","2"-> {
 					            System.out.println("Model: HP Victus Price: ₹75,000");
+					            System.out.println("Enter quantity of HP Victus");
+								int quantity = sc.nextInt();
 					            double hpvictus_price=75000;
-					            hp_price+=hpvictus_price; 
+					            hp_price+=(hpvictus_price*quantity); 
 					        }
 
 					        case "hp envy","3"-> {
 					            System.out.println("Model: HP Envy Price: ₹90,000");
+					            System.out.println("Enter quantity of HP Envy");
+								int quantity = sc.nextInt();
 					            double hpenvy_price=90000;
-					            hp_price+=hpenvy_price;
+					            hp_price+=(hpenvy_price*quantity);
 					        }
 
 					        default -> System.out.println("Invalid HP model");
@@ -71,20 +78,26 @@ public class DigitalStore {
 						    switch (lenovo_model) {
 						        case "lenovo ideapad","1" -> {
 						            System.out.println("Model: Lenovo IdeaPad Price: ₹50,000");
+						            System.out.println("Enter quantity of Lenovo IdeaPad");
+									int quantity = sc.nextInt();
 						            double ideapad_price = 50000;
-						            lenovo_price += ideapad_price;
+						            lenovo_price += (ideapad_price*quantity);
 						        }
 
 						        case "lenovo thinkpad","2" -> {
 						            System.out.println("Model: Lenovo ThinkPad Price: ₹80,000");
+						            System.out.println("Enter quantity of Lenovo ThinkPad");
+									int quantity = sc.nextInt();
 						            double thinkpad_price = 80000;
-						            lenovo_price += thinkpad_price;
+						            lenovo_price += (thinkpad_price*quantity);
 						        }
 
 						        case "lenovo legion","3" -> {
 						            System.out.println("Model: Lenovo Legion Price: ₹1,20,000");
+						            System.out.println("Enter quantity of Lenovo Legion");
+									int quantity = sc.nextInt();
 						            double legion_price = 120000;
-						            lenovo_price += legion_price;
+						            lenovo_price += (legion_price*quantity);
 						        }
 
 						        default -> System.out.println("Invalid Lenovo model");
@@ -104,20 +117,26 @@ public class DigitalStore {
 						    switch (dell_model) {
 						        case "dell inspiron","1" -> {
 						            System.out.println("Model: Dell Inspiron Price: ₹55,000");
+						            System.out.println("Enter quantity of Dell Inspiron");
+									int quantity = sc.nextInt();
 						            double inspiron_price = 55000;
-						            dell_price += inspiron_price;
+						            dell_price += (inspiron_price*quantity);
 						        }
 
 						        case "dell vostro","2" -> {
 						            System.out.println("Model: Dell Vostro Price: ₹65,000");
+						            System.out.println("Enter quantity of Dell Vostro");
+									int quantity = sc.nextInt();
 						            double vostro_price = 65000;
-						            dell_price += vostro_price;
+						            dell_price += (vostro_price*quantity);
 						        }
 
 						        case "dell xps","3" -> {
 						            System.out.println("Model: Dell XPS Price: ₹1,50,000");
+						            System.out.println("Enter quantity of Dell XPS");
+									int quantity = sc.nextInt();
 						            double xps_price = 150000;
-						            dell_price += xps_price;
+						            dell_price += (xps_price*quantity);
 						        }
 
 						        default -> System.out.println("Invalid Dell model");
@@ -137,20 +156,26 @@ public class DigitalStore {
 						    switch (asus_model) {
 						        case "asus vivobook","1" -> {
 						            System.out.println("Model: Asus VivoBook Price: ₹45,000");
+						            System.out.println("Enter quantity of Asus VivoBook");
+									int quantity = sc.nextInt();
 						            double vivobook_price = 45000;
-						            asus_price += vivobook_price;
+						            asus_price += (vivobook_price*quantity);
 						        }
 
 						        case "asus zenbook","2" -> {
 						            System.out.println("Model: Asus ZenBook Price: ₹95,000");
+						            System.out.println("Enter quantity of Asus ZenBook");
+									int quantity = sc.nextInt();
 						            double zenbook_price = 95000;
-						            asus_price += zenbook_price;
+						            asus_price += (zenbook_price*quantity);
 						        }
 
 						        case "asus rog","3" -> {
 						            System.out.println("Model: Asus ROG Price: ₹1,25,000");
+						            System.out.println("Enter quantity of Asus ROG");
+									int quantity = sc.nextInt();
 						            double rog_price = 125000;
-						            asus_price += rog_price;
+						            asus_price += (rog_price*quantity);
 						        }
 
 						        default -> System.out.println("Invalid Asus model");
@@ -161,7 +186,8 @@ public class DigitalStore {
 					   default -> System.out.println("Invalid Laptop model");
 					 }
 					 System.out.println("Do you want to continue laptop purchases y for yes and n for no");
-					 lyn=sc.nextLine();
+					 lyn=sc.next();
+					 sc.nextLine();
 				 }while(lyn.equalsIgnoreCase("y"));
 				 System.out.println("Total Laptop Price: "+laptop_price);
 				 total_price+=laptop_price;
@@ -197,19 +223,28 @@ public class DigitalStore {
                     case "samsung galaxy s25","1" -> {
                         System.out.println(
                             "Samsung Galaxy S25 Price: ₹80,000");
-                        samsung_price += 80000;
+                        System.out.println("Enter quantity of Samsung Galaxy S25");
+						int quantity = sc.nextInt();
+						double s25_price=80000;
+                        samsung_price +=(s25_price*quantity);
                     }
 
                     case "samsung galaxy a56","2" -> {
                         System.out.println(
                             "Samsung Galaxy A56 Price: ₹40,000");
-                        samsung_price += 40000;
+                        System.out.println("Enter quantity of Samsung Galaxy A56");
+						int quantity = sc.nextInt();
+						double sa56_price=40000;
+                        samsung_price += (sa56_price*quantity);
                     }
 
                     case "samsung galaxy m35","3" -> {
                         System.out.println(
                             "Samsung Galaxy M35 Price: ₹20,000");
-                        samsung_price += 20000;
+                        System.out.println("Enter quantity of Samsung Galaxy M35");
+						int quantity = sc.nextInt();
+						double sm35_price=20000;
+                        samsung_price += (sm35_price*quantity);
                     }
 
                     default ->
@@ -230,12 +265,18 @@ public class DigitalStore {
                 switch (apple_model) {
                     case "iphone 16","1" -> {
                         System.out.println("iPhone 16 Price: ₹80,000");
-                        iphone_price += 80000;
+                        System.out.println("Enter quantity of iPhone 16");
+						int quantity = sc.nextInt();
+						double i16_price=80000;
+                        iphone_price += (i16_price*quantity);
                     }
 
                     case "iphone 16 pro","2" -> {
                         System.out.println("iPhone 16 Pro Price: ₹1,20,000");
-                        iphone_price += 120000;
+                        System.out.println("Enter quantity of iPhone 16 Pro");
+						int quantity = sc.nextInt();
+						double i16pro_price=120000;
+                        iphone_price += (i16pro_price*quantity);
                     }
 
                     default ->
@@ -256,12 +297,18 @@ public class DigitalStore {
                 switch (oneplus_model) {
                     case "oneplus 13","1" -> {
                         System.out.println("OnePlus 13 Price: ₹70,000");
-                        oneplus_price += 70000;
+                        System.out.println("Enter quantity of OnePlus 13");
+						int quantity = sc.nextInt();
+						double on13_price=70000;
+                        oneplus_price += (on13_price*quantity);
                     }
 
                     case "oneplus nord","2" -> {
                         System.out.println("OnePlus Nord Price: ₹30,000");
-                        oneplus_price += 30000;
+                        System.out.println("Enter quantity of OnePlus Nord");
+						int quantity = sc.nextInt();
+						double on_price=30000;
+                        oneplus_price += (on_price*quantity);
                     }
 
                     default ->
@@ -276,7 +323,8 @@ public class DigitalStore {
         }
 
         System.out.println("Do you want to continue mobile purchases? y/n");
-        myn = sc.nextLine();
+        myn = sc.next();
+        sc.nextLine();
 
         } while (myn.equalsIgnoreCase("y"));
 
@@ -313,15 +361,24 @@ public class DigitalStore {
                 switch (samsung_tab) {
                     case "samsung galaxy tab s10","1" -> {
                         System.out.println("Samsung Galaxy Tab S10 Price: ₹70,000");
-                        samsung_price += 70000;
+                        System.out.println("Enter quantity of samsung galaxy tab s10");
+						int quantity = sc.nextInt();
+						double sg10_price=70000;
+                        samsung_price += (sg10_price*quantity);
                     }
                     case "samsung galaxy tab s10+","2" -> {
                         System.out.println("Samsung Galaxy Tab S10+ Price: ₹90,000");
-                         samsung_price+= 90000;
+                        System.out.println("Enter quantity of samsung galaxy tab s10+");
+						int quantity = sc.nextInt();
+						double sg10_price=90000;
+                         samsung_price+=(sg10_price*quantity) ;
                     }
                     case "samsung galaxy tab a9","3" -> {
                         System.out.println("Samsung Galaxy Tab A9 Price: ₹20,000");
-                        samsung_price+= 20000;
+                        System.out.println("Enter quantity of Samsung Galaxy Tab A9");
+						int quantity = sc.nextInt();
+						double sga9_price=20000;
+                        samsung_price+=(sga9_price*quantity);
                     }
                     default -> System.out.println("Invalid Samsung Tablet");
                 }
@@ -341,15 +398,24 @@ public class DigitalStore {
                 switch (apple_tab) {
                     case "ipad air","1" -> {
                         System.out.println("iPad Air Price: ₹60,000");
-                        apple_price += 60000;
+                        System.out.println("Enter quantity of iPad Air");
+						int quantity = sc.nextInt();
+						double iair_price=60000;
+                        apple_price += (iair_price*quantity);
                     }
                     case "ipad pro","2" -> {
                         System.out.println("iPad Pro Price: ₹1,00,000");
-                        apple_price += 100000;
+                        System.out.println("Enter quantity of iPad Pro");
+						int quantity = sc.nextInt();
+						double ipro_price=100000;
+                        apple_price += (ipro_price*quantity);
                     }
                     case "ipad mini","3" -> {
                         System.out.println("iPad Mini Price: ₹50,000");
-                        apple_price += 50000;
+                        System.out.println("Enter quantity of iPad Mini Price");
+						int quantity = sc.nextInt();
+						double ipad_price=50000;
+                        apple_price += (ipad_price*quantity);
                     }
                     default -> System.out.println("Invalid Apple Tablet");
                 }
@@ -369,15 +435,24 @@ public class DigitalStore {
                 switch (lenovo_tab) {
                     case "lenovo tab p12","1" -> {
                         System.out.println("Lenovo Tab P12 Price: ₹30,000");
-                        lenovo_price += 30000;
+                        System.out.println("Enter quantity of Lenovo Tab P12");
+						int quantity = sc.nextInt();
+						double lp12_price=30000;
+                        lenovo_price += (lp12_price*quantity);
                     }
                     case "lenovo tab m11","2" -> {
                         System.out.println("Lenovo Tab M11 Price: ₹20,000");
-                        lenovo_price += 20000;
+                        System.out.println("Enter quantity of Lenovo Tab M11");
+						int quantity = sc.nextInt();
+						double ltm11_price=20000;
+                        lenovo_price += (ltm11_price*quantity);
                     }
                     case "lenovo legion tab","3" -> {
                         System.out.println("Lenovo Legion Tab Price: ₹50,000");
-                        lenovo_price += 50000;
+                        System.out.println("Enter quantity of lenovo legion tab");
+						int quantity = sc.nextInt();
+						double llt_price=50000;
+                        lenovo_price += (llt_price*quantity);
                     }
                     default -> System.out.println("Invalid Lenovo Tablet");
                 }
@@ -389,7 +464,8 @@ public class DigitalStore {
         }
 
         System.out.println("Do you want to continue tablet purchases? y/n");
-        tyn = sc.nextLine();
+        tyn = sc.next();
+        sc.nextLine();
 
          } while (tyn.equalsIgnoreCase("y"));
 
@@ -426,15 +502,24 @@ public class DigitalStore {
                 switch (samsung_watch) {
                     case "galaxy watch 7","1" -> {
                         System.out.println("Galaxy Watch 7 Price: ₹30,000");
-                        samsung_price += 30000;
+                        System.out.println("Enter quantity of galaxy watch 7");
+						int quantity = sc.nextInt();
+						double gw7_price=30000;
+                        samsung_price += (gw7_price*quantity);
                     }
                     case "galaxy watch ultra","2" -> {
                         System.out.println("Galaxy Watch Ultra Price: ₹60,000");
-                        samsung_price  += 60000;
+                        System.out.println("Enter quantity of galaxy watch ultra");
+						int quantity = sc.nextInt();
+						double gultra_price=60000;
+                        samsung_price  += (gultra_price*quantity);
                     }
                     case "galaxy watch fe","3" -> {
                         System.out.println("Galaxy Watch FE Price: ₹20,000");
-                        samsung_price  += 20000;
+                        System.out.println("Enter quantity of galaxy watch fe");
+						int quantity = sc.nextInt();
+						double gw_price=20000;
+                        samsung_price  += (gw_price*quantity);
                     }
                     default -> System.out.println("Invalid Samsung Watch");
                 }
@@ -454,15 +539,24 @@ public class DigitalStore {
                 switch (apple_watch) {
                     case "apple watch se","1" -> {
                         System.out.println("Apple Watch SE Price: ₹25,000");
-                        apple_price += 25000;
+                        System.out.println("Enter quantity of apple watch se");
+						int quantity = sc.nextInt();
+						double ase_price=25000;
+                        apple_price += (ase_price*quantity);
                     }
                     case "apple watch series 10","2" -> {
                         System.out.println("Apple Watch Series 10 Price: ₹45,000");
-                        apple_price += 45000;
+                        System.out.println("Enter quantity of Apple Watch Series 10");
+						int quantity = sc.nextInt();
+						double aw10_price=45000;
+                        apple_price += (aw10_price*quantity);
                     }
                     case "apple watch ultra 2","3" -> {
                         System.out.println("Apple Watch Ultra 2 Price: ₹90,000");
-                        apple_price += 90000;
+                        System.out.println("Enter quantity of Apple Watch Ultra 2");
+						int quantity = sc.nextInt();
+						double au_price=90000;
+                        apple_price += (au_price*quantity);
                     }
                     default -> System.out.println("Invalid Apple Watch");
                 }
@@ -482,15 +576,24 @@ public class DigitalStore {
                 switch (noise_watch) {
                     case "noise colorfit","1" -> {
                         System.out.println("Noise ColorFit Price: ₹3,000");
-                        noise_price += 3000;
+                        System.out.println("Enter quantity of Noise ColorFit");
+						int quantity = sc.nextInt();
+						double nc_price=3000;
+                        noise_price +=(nc_price*quantity) ;
                     }
                     case "noise endeavour","2" -> {
                         System.out.println("Noise Endeavour Price: ₹5,000");
-                        noise_price += 5000;
+                        System.out.println("Enter quantity of noise endeavour");
+						int quantity = sc.nextInt();
+						double ne_price=5000;
+                        noise_price +=(ne_price*quantity) ;
                     }
                     case "noise pro 5","3" -> {
                         System.out.println("Noise Pro 5 Price: ₹4,000");
-                        noise_price += 4000;
+                        System.out.println("Enter quantity of Noise Pro 5");
+						int quantity = sc.nextInt();
+						double npro_price=4000;
+                        noise_price += (npro_price*quantity);
                     }
                     default -> System.out.println("Invalid Noise Watch");
                 }
@@ -502,8 +605,8 @@ public class DigitalStore {
           }
 
         System.out.println("Do you want to continue smart watch purchases? y/n");
-        syn = sc.nextLine();
-
+        syn = sc.next();
+        sc.nextLine();
          } while (syn.equalsIgnoreCase("y"));
 
          System.out.println("Total Smart Watch Price: ₹" + watch_price);
@@ -539,15 +642,24 @@ case "Ear Phones","5" -> {
                 switch (samsung_earphone) {
                     case "galaxy buds fe","1" -> {
                         System.out.println("Galaxy Buds FE Price: ₹8,000");
-                        samsung_price += 8000;
+                        System.out.println("Enter quantity of Galaxy Buds FE");
+						int quantity = sc.nextInt();
+						double gl_price=8000;
+                        samsung_price += (gl_price*quantity);
                     }
                     case "galaxy buds 3","2" -> {
                         System.out.println("Galaxy Buds 3 Price: ₹15,000");
-                        samsung_price += 15000;
+                        System.out.println("Enter quantity of galaxy buds 3");
+						int quantity = sc.nextInt();
+						double gl3_price=15000;
+                        samsung_price += (gl3_price*quantity);
                     }
                     case "galaxy buds 3 pro","3" -> {
                         System.out.println("Galaxy Buds 3 Pro Price: ₹20,000");
-                        samsung_price += 20000;
+                        System.out.println("Enter quantity of Galaxy Buds 3 Pro");
+						int quantity = sc.nextInt();
+						double gl3pro_price=20000;
+                        samsung_price += (gl3pro_price*quantity);
                     }
                     default -> System.out.println("Invalid Samsung Ear Phone");
                 }
@@ -568,15 +680,24 @@ case "Ear Phones","5" -> {
                 switch (apple_earphone) {
                     case "airpods 4","1"-> {
                         System.out.println("AirPods 4 Price: ₹13,000");
-                        apple_price += 13000;
+                        System.out.println("Enter quantity of AirPods 4");
+						int quantity = sc.nextInt();
+						double a4_price=13000;
+                        apple_price +=(a4_price*quantity);
                     }
                     case "airpods pro 2","2" -> {
                         System.out.println("AirPods Pro 2 Price: ₹25,000");
-                        apple_price += 25000;
+                        System.out.println("Enter quantity of AirPods Pro 2");
+						int quantity = sc.nextInt();
+						double ap_price=25000;
+                        apple_price += (ap_price*quantity);
                     }
                     case "airpods max","3" -> {
                         System.out.println("AirPods Max Price: ₹60,000");
-                        apple_price += 60000;
+                        System.out.println("Enter quantity of AirPods Max");
+						int quantity = sc.nextInt();
+						double am_price=60000;
+                        apple_price +=(am_price*quantity);
                     }
                     default -> System.out.println("Invalid Apple Ear Phone");
                 }
@@ -596,15 +717,24 @@ case "Ear Phones","5" -> {
                 switch (boat_earphone) {
                     case "boat airdopes 141","1" -> {
                         System.out.println("boAt Airdopes 141 Price: ₹1,500");
-                        boat_price += 1500;
+                        System.out.println("Enter quantity of boAt Airdopes 141");
+						int quantity = sc.nextInt();
+						double ba141_price=1500;
+                        boat_price += (quantity*ba141_price);
                     }
                     case "boat airdopes 161","2" -> {
                         System.out.println("boAt Airdopes 161 Price: ₹2,000");
-                        boat_price += 2000;
+                        System.out.println("Enter quantity of boAt Airdopes 161");
+						int quantity = sc.nextInt();
+						double ba_price=2000;
+                        boat_price += (ba_price*quantity);
                     }
                     case "boat nirvana","3" -> {
                         System.out.println("boAt Nirvana Price: ₹3,000");
-                        boat_price += 3000;
+                        System.out.println("Enter quantity of boAt Nirvana");
+						int quantity = sc.nextInt();
+						double bn_price=3000;
+                        boat_price +=(quantity*bn_price);
                     }
                     default -> System.out.println("Invalid boAt Ear Phone");
                 }
@@ -628,7 +758,8 @@ case "Ear Phones","5" -> {
 			}
 			
 			System.out.println("Do you want to continue shopping? y/n");
-			yn=sc.nextLine();
+			yn=sc.next();
+			sc.nextLine();
 		}while(yn.equalsIgnoreCase("y"));
 		System.out.println("Thanks for shopping in my Store.\n Visit my store to Purchase the good quality products with reasonable prices.");
 		System.out.println("Your total Purchases Price: "+total_price);
